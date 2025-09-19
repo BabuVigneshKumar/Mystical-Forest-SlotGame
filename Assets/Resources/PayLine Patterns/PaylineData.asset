@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1166c7241cd856f44864dd4f430b51da, type: 3}
+  m_Name: PaylineData
+  m_EditorClassIdentifier: 
+  paylines:
+  - lineNumber: 1
+    positions: 0000000000000000000000000000000000000000
+    description: Top Horizontal
+    type: 0
+  - lineNumber: 2
+    positions: 0100000001000000010000000100000001000000
+    description: Middle Horizontal
+    type: 0
+  - lineNumber: 3
+    positions: 0200000002000000020000000200000002000000
+    description: Bottom Horizontal
+    type: 0
+  - lineNumber: 4
+    positions: 0000000001000000020000000100000000000000
+    description: V Shap
+    type: 1
+  - lineNumber: 5
+    positions: 0200000001000000000000000100000002000000
+    description: Inverted V
+    type: 1
+  - lineNumber: 6
+    positions: 0000000000000000010000000200000002000000
+    description: Top Left to Bottom Right
+    type: 2
+  - lineNumber: 7
+    positions: 0200000002000000010000000000000000000000
+    description: Bottom Left to Top Right
+    type: 2
+  - lineNumber: 8
+    positions: 0100000000000000000000000000000001000000
+    description: Middle to Top to Middle
+    type: 2
+  - lineNumber: 9
+    positions: 0100000002000000020000000200000001000000
+    description: Middle to Bottom to Middle
+    type: 2
+  - lineNumber: 10
+    positions: 0000000001000000000000000100000000000000
+    description: Wave Top
+    type: 3
+  - lineNumber: 11
+    positions: 0200000001000000020000000100000002000000
+    description: Wave Bottom
+    type: 3
+  - lineNumber: 12
+    positions: 0000000002000000010000000200000000000000
+    description: W Shape
+    type: 4
+  - lineNumber: 13
+    positions: 0200000000000000010000000000000002000000
+    description: M Shape
+    type: 4
+  - lineNumber: 14
+    positions: 0100000000000000010000000200000001000000
+    description: N Shape
+    type: 4
+  - lineNumber: 15
+    positions: 0100000002000000010000000000000001000000
+    description: Reverse N
+    type: 4
+  - lineNumber: 16
+    positions: 0000000000000000020000000000000000000000
+    description: Top Dip
+    type: 5
+  - lineNumber: 17
+    positions: 0200000002000000000000000200000002000000
+    description: Bottom Peak
+    type: 5
+  - lineNumber: 18
+    positions: 0000000001000000010000000100000002000000
+    description: Ascending Slope
+    type: 5
+  - lineNumber: 19
+    positions: 0200000001000000010000000100000000000000
+    description: Descending Slope
+    type: 5
+  - lineNumber: 14
+    positions: 0100000001000000000000000100000001000000
+    description: Descending Slope
+    type: 5
