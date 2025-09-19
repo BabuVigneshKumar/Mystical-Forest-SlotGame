@@ -1,104 +1,87 @@
-# Mystical-Forest-SlotGame 
-Slot Machine Game - Unity
-A fully functional 3x5 slot machine game built with Unity, featuring 20 paylines, win detection, animations, and audio effects.
+# Slot Machine Game - Unity
 
-🎮 Features
-3x5 Reel Layout with smooth spinning animations
+A fully functional 3×5 slot machine game built with Unity, featuring 20 paylines, win detection, smooth animations, and immersive audio effects.
 
-20 Fixed Paylines with visual highlighting
+![Unity](https://img.shields.io/badge/Unity-2020.3%2B-000000?style=for-the-badge&logo=unity)
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![DOTween](https://img.shields.io/badge/Animation-DOTween-green?style=for-the-badge)
 
-Win Detection System for both regular symbols and scatters
+## ✨ Features
 
-Betting System with multiple bet levels (0.10 to 25.00)
+### 🎰 Gameplay
+- **3×5 Reel Layout** with smooth spinning animations
+- **20 Fixed Paylines** with visual highlighting using LineRenderer
+- **Win Detection System** for both regular symbols and scatters
+- **Wild Symbol Mechanics** - substitutes for all symbols except Scatter/Bonus
+- **Scatter Wins** - pays anywhere on reels
 
-Balance Management with initial balance of 2000
+### 💰 Betting & Economy
+- **Flexible Betting System** with multiple levels (0.10 to 25.00)
+- **Balance Management** with initial balance of 2000
+- **Configurable Payouts** based on symbol type and match count
+- **Auto-reset** of bet amounts after each spin
 
-Audio System with sound effects for spins, wins, and errors
+### 🎨 Visual & Audio
+- **Smooth Animations** powered by DOTween
+- **Winning Symbol Highlighting** with scale pulses
+- **Payline Visualization** with animated LineRenderer effects
+- **Loading Screen** with progress bar animation
+- **Snowfall Background Effect**
+- **Comprehensive Audio System** with sounds for spins, wins, and errors
 
-Loading Screen with progress bar
+### 🎯 Symbol System
+- **Symbol Hierarchy**: High, Low, and Special categories
+- **Special Symbols**: Wild, Scatter, and Bonus
+- **Configurable Database** using ScriptableObjects
 
-UI System with info panels and settings
+## 🚀 How to Play
 
-Symbol Hierarchy (High, Low, Special symbols including Wild, Scatter, Bonus)
+1. **Set Your Bet** - Use the +/- buttons to adjust your bet amount (0.10 - 25.00)
+2. **Spin the Reels** - Click the spin button to start the game
+3. **Watch for Wins**:
+   - 3+ matching symbols on any payline (left to right)
+   - Wild symbols substitute for regular symbols
+   - 3+ Scatter symbols anywhere on reels trigger scatter wins
+4. **Collect Winnings** - Payouts are automatically added to your balance
 
-🛠️ Technical Implementation
-Core Scripts
-GameManager.cs - Main game controller handling betting, balance, and win detection
+## 📊 Payout Structure
 
-ReelsManager.cs - Manages reel spinning, symbol randomization, and animations
+| Symbol Type | 3 Symbols | 4 Symbols | 5 Symbols |
+|-------------|-----------|-----------|-----------|
+| Wild        | 1x        | 10x       | 20x       |
+| High 1      | 1x        | 10x       | 20x       |
+| High 2      | 0.8x      | 6x        | 16x       |
+| High 3      | 0.6x      | 4x        | 12x       |
+| High 4      | 0.4x      | 2x        | 8x        |
+| Low 1-5     | 0.3x      | 1.2x      | 3x        |
+| Scatter     | 30x       | 40x       | 50x       |
 
-PaylineManager.cs - Handles payline validation and win checking
+## 🛠️ Technical Architecture
 
-SlotData.cs - Individual slot symbol data and behavior
+### Core Scripts
+- **`GameManager.cs`** - Main game controller (betting, balance, win detection)
+- **`ReelsManager.cs`** - Reel spinning, symbol randomization, animations
+- **`PaylineManager.cs`** - Payline validation and win checking
+- **`SlotData.cs`** - Individual slot symbol behavior
+- **`AudioController.cs`** - Audio management system
 
-AudioController.cs - Manages all game audio effects
+### Data Systems
+- **Symbol Database** - Configurable symbol types and categories
+- **Payline Database** - ScriptableObject-based payline configurations
+- **PayTable System** - Customizable payout values
 
-Key Systems
-Symbol Database - Configurable symbol types with categories and payout multipliers
+### Animation System
+- **DOTween Integration** for smooth animations
+- **Easing Effects** for natural movement
+- **Sequenced Animations** for complex transitions
 
-Payline Database - ScriptableObject-based payline configurations
+## 📦 Installation & Setup
 
-PayTable System - Configurable payout values for different symbol combinations
+### Prerequisites
+- Unity 2022.3 or later
+- DOTween plugin (import via Asset Store or Package Manager)
 
-DOTween Integration - Smooth animations for spins and wins
-
-🎯 How to Play
-Set Your Bet - Use +/- buttons to adjust bet amount (0.10 - 25.00)
-
-Spin - Click the spin button to start the reels
-
-Win Conditions:
-
-3+ matching symbols on any payline (left to right)
-
-Wild symbols substitute for all except Scatter/Bonus
-
-3+ Scatter symbols anywhere on reels
-
-Payouts - Based on symbol type and number of matches
-
-📊 Symbol Payouts
-Symbol Type	3 Symbols	4 Symbols	5 Symbols
-Wild	1x	10x	20x
-High 1	1x	10x	20x
-High 2	0.8x	6x	16x
-High 3	0.6x	4x	12x
-High 4	0.4x	2x	8x
-Low 1-5	0.3x	1.2x	3x
-Scatter	3x10	4x10	5x10
-🎨 Visual Features
-Smooth Reel Animations with easing effects
-
-Winning Symbol Highlighting with scale animations
-
-Payline Visualization with LineRenderer effects
-
-Loading Screen with progress animation
-
-Snowfall Effect on background
-
-Responsive UI with toggleable info panels
-
-🔊 Audio Features
-Reel Spin Sound during spinning
-
-Reel Stop Sound when reels stop
-
-Winning Sound for successful spins
-
-Error Sound for unsuccessful spins
-
-Button Click Sounds for UI interactions
-
-🚀 Setup Instructions
-Open in Unity - Requires Unity 2020.3 or later
-
-Import DOTween - Ensure DOTween is imported for animations
-
-Configure References - Set up scriptable objects for symbols and paylines
-
-Audio Setup - Assign audio clips to AudioController
-
-Build & Run - Test the game in editor or build for target platform
-
-📁 Project Structure
+### Setup Steps
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/slot-machine-game.git
