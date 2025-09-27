@@ -6,7 +6,6 @@ public class SlotData : MonoBehaviour
     [SerializeField] private Image SlotImage;
     private RectTransform rectTransform;
 
-    // Add reference to symbol data
     [SerializeField] private SymbolData symbolData;
 
     private void Awake()
